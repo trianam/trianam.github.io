@@ -1,17 +1,17 @@
-# Built with Jekyll 3.2.0
+# Built with Jekyll 3.2.0 and Ed.
 
 # Setup
-title:               Ed.
-tagline:             'a jekyll theme for minimal editions'
-description:         'Ed is a Jekyll theme designed for textual editors based on minimal computing principles, and focused on legibility and flexibility.'
-url:                 'http://elotroalex.github.io'
+title:               Trianam's notes
+tagline:             'a blog about machine learning and artificial intelligence'
+description:         '&ldquo;The original question, &apos;Can machines think?&apos; I believe to be too meaningless to deserve discussion.&rdquo; <br> &#8213; Alan Turing'
+url:                 'http://trianam.github.io'
 baseurl:             ''
 
 # About/contact
 author:
-  name:              Alex Gil
-  url:               https://twitter.com/elotroalex
-  email:             colibri.alex@gmail.com
+  name:              Stefano Martina
+  url:               http://ai.dinfo.unifi.it/stefano
+  email:             stefano.martina@unifi.it
 
 # Permalinks
 
@@ -25,8 +25,11 @@ permalink: /:title/
 encoding: utf-8
 
 # Collections for texts
+collections_dir: collections
 collections:
   texts:
+    output: true
+  theory:
     output: true
 
 # Markdown specs
