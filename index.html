@@ -3,7 +3,11 @@ layout: default
 title: "Trianam's notes"
 ---
 <div class="introduction">
-  <h1>hi.</h1>
+  <blockquote>&ldquo;The original question, &apos;Can machines
+  think?&apos; I believe to be too meaningless to deserve
+    discussion.&rdquo; <br> &#8213; Alan Turing</blockquote>
+  <br>
+  <h1>Hello,</h1>
   <p>I want to present here some notes on my journey through the world
   of machine learning and artificial intelligence. I'll try to keep
   the notes ordered in a table of contents. Thank you for the visit</p>
@@ -17,17 +21,6 @@ title: "Trianam's notes"
   {% for item in site.theory %}
   
     <li class="theory-title">
-      <a href="{{ site.baseurl }}{{ item.url }}">
-        {{ item.title }}
-      </a>
-    </li>
-  {% endfor %}
-  </ul>
-  <h2>sample texts</h2>
-  <ul class="texts">
-  {% for item in site.texts %}
-  
-    <li class="text-title">
       <a href="{{ site.baseurl }}{{ item.url }}">
         {{ item.title }}
       </a>

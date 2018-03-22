@@ -3,8 +3,8 @@
 # Setup
 title:               Trianam's notes
 tagline:             'a blog about machine learning and artificial intelligence'
-description:         '&ldquo;The original question, &apos;Can machines think?&apos; I believe to be too meaningless to deserve discussion.&rdquo; <br> &#8213; Alan Turing'
-url:                 'http://trianam.github.io'
+description:         'By Stefano Martina'
+url:                 'https://trianam.github.io'
 baseurl:             ''
 
 # About/contact
@@ -27,8 +27,6 @@ encoding: utf-8
 # Collections for texts
 #collections_dir: collections
 collections:
-  texts:
-    output: true
   theory:
     output: true
 
