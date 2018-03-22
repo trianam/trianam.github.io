@@ -25,7 +25,7 @@ permalink: /:title/
 encoding: utf-8
 
 # Collections for texts
-collections_dir: collections
+#collections_dir: collections
 collections:
   texts:
     output: true
