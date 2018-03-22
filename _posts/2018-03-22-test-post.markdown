@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Test post"
-date:   2018-03-22 00:18:00 +0100
-categories:
----
-# This is a test post
-as I said this is a test
