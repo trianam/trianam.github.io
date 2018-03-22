@@ -10,10 +10,19 @@ mathjax: true
 	\label{eq:test}
 \end{equation}
 
-In equation \eqref{eq:test} is visible a test, is it also possible to write inline formulas like $y=x^2$. Note that is also possible to use footnotes[^fn1] in the text.
+In equation \eqref{eq:test} is visible a test, is it also possible to
+write inline formulas like $y=x^2$. Note that is also possible to use
+footnotes[^fn1] in the text. To quote some pubblication write
+something like [Huang2001](#Huang2001).
+
+<br>
+
+---
 
 ## References
-test
+
+### Huang2001:
+E, W. & Huang, Z., 2001. Matching Conditions in Atomistic-Continuum Modeling of Materials. _arXiv.org_, (13), p.135501. Available at: [http://arxiv.org/abs/cond-mat/0106615v1](http://arxiv.org/abs/cond-mat/0106615v1).
 
 <br>
 
