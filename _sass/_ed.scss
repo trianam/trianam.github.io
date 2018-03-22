@@ -755,6 +755,17 @@ div.toc {
   margin-top: -.5rem;
 }
 
+.post .image {
+  text-align: center;
+  font-style: italic;
+}
+
+.post .image img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Footnotes styles */
 
 sub, sup {

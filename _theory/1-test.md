@@ -17,6 +17,13 @@ something like [Huang2001](#huang2001). The previous id link is created automati
 
 I add some other stuff just to see if the reference link is working.
 I need some space to fill.
+{% include image.html url="/assets/theory/1-test-RNN-rolled.png" description="A testing image." width="20%" %}
+
+It is possible also to include vectorial images
+{% include image.html url="/assets/theory/1-test-circle.svg" description="A testing svg image." width="20%" %}
+
+If we omit the description what appens?
+{% include image.html url="/assets/theory/1-test-circle.svg" description="" width="20%" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
