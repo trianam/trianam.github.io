@@ -10,7 +10,7 @@ mathjax: true
 	\label{eq:test}
 \end{equation}
 
-In equation \eqref{eq:test} is visible a test. Note that is also possible to use footnotes[^fn1] in the text.
+In equation \eqref{eq:test} is visible a test, is it also possible to write inline formulas like $y=x^2$. Note that is also possible to use footnotes[^fn1] in the text.
 
 ## References
 test
