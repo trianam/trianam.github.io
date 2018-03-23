@@ -22,5 +22,5 @@ The laboratory where I work is located in Florence, Italy. The Artificial Intell
 
 Below you can see directions to the building and inside it. In green is my laboratory and in red my supervisor's office.
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.7625606864754!2d11.250810715777506!3d43.798539751037914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132a5429aa15678d%3A0x95538b98c8b05de5!2sVia+di+Santa+Marta%2C+3%2C+50139+Firenze+FI!5e0!3m2!1sit!2sit!4v1521652064072" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>  
+<p align="center"><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=11.24925971031189%2C43.795895824025514%2C11.257435083389284%2C43.800542150814806&amp;layer=mapnik&amp;marker=43.798219032583155%2C11.253347396850586" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=43.79822&amp;mlon=11.25335#map=17/43.79822/11.25335" target="_blank">View Larger Map</a></small></p>
 ![Second floor](/assets/MapDINFO.png)
