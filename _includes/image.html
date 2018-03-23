@@ -1,4 +1,13 @@
-<figure class="image">
+<figure {% if include.label %}id="figure{{ include.label }}"{% endif %} class="image">
     <img src="{{ include.url }}" alt="{{ include.description }}" style="width:{{ include.width }}">
-    <figcaption>{{ include.description }}</figcaption>
+    {% if include.label or include.description %}
+        <figcaption>
+        {% if include.label %}
+            <strong>Fig {{ include.label }}{% if include.description %}:</strong> {% else %}</strong>{% endif %}
+        {% endif %}
+        {% if include.description %}
+            {{ include.description }}
+        {% endif %}
+        </figcaption>
+    {% endif %}
 </figure>
