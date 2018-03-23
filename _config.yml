@@ -29,6 +29,19 @@ encoding: utf-8
 collections:
   theory:
     output: true
+    weight: 1
+    title: "Theory"
+    order:
+      - '/theory/test1'
+      - '/theory/atest2'
+      - '/theory/sometest3'
+  practice:
+    output: true
+    weight: 2
+    title: "Practice"
+    order:
+      - '/practice/ptest1'
+      - '/practice/aptest2'
 
 # Markdown specs
 markdown: kramdown

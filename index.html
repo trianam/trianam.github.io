@@ -16,17 +16,19 @@ title: "Trianam's notes"
 <hr>
 
 <div class="toc">
-  <h2>Theory</h2>
-  <ul class="theory">
-  {% for item in site.theory %}
-    <li class="theory-title">
-      <a href="{{ site.baseurl }}{{ item.url }}">
+  {% assign collections = site.collections | sort: "weight" %}
+  {% for col in collections %}
+    <h2>{{ col.title }}</h2>
+    <ul>
+    {% for ident in col.order %}
+        {% assign item = site.documents | where: "id", ident | first %}
+        <li>
+        <a href="{{ site.baseurl }}{{ item.url }}">
         {{ item.title }}
-      </a>
-    </li>
+        </a>
+        </li>
+    {% endfor %}
+    </ul>
   {% endfor %}
-  </ul>
 </div>
-
-
 
