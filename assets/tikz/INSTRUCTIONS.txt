@@ -1,0 +1,2 @@
+pdflatex xxx.tex
+pdf2svg xxx.pdf xxx.svg

@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\input{header.tex}
+\begin{document}
+\begin{tikzpicture}[x=1.5cm, y=1.5cm]
+  \node [io] (input) at (0,0) {$\vect{x}$};
+
+  \node [layer] (state) at (0,1) {};
+  \node [sub, anchor=north west] (fun) at (state.north west) {$R,O$};
+  \node [subbox, anchor=south east] (par) at (state.south east) {$\theta$};
+  \node [delay] (delay) at (1,1) {};
+
+  \node [io] (output) at (0,2) {$\vect{y}$};
+      
+  \draw [arrow] (input) -- (state);
+  \draw [arrow] (state) -- (output);
+  \draw (state) edge[arrow, bend left=60, edge label=$\vect{s}$] (delay.north);
+  \draw (delay.south) edge[arrow, bend left=60] (state);
+\end{tikzpicture}
+\end{document}

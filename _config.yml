@@ -11,7 +11,7 @@ baseurl:             ''
 author:
   name:              Stefano Martina
   url:               http://ai.dinfo.unifi.it/stefano
-  email:             stefano.martina@unifi.it
+  email:             
 
 # Permalinks
 
@@ -33,6 +33,12 @@ collections:
     title: "Theory"
     order:
       - '/theory/machine-learning'
+  nlp:
+    output: true
+    weight: 40
+    title: "NLP"
+    order:
+      - '/nlp/rnn-generators'
 
 # Markdown specs
 markdown: kramdown
