@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\input{header.tex}
+\begin{document}
+\begin{tikzpicture}[x=1.5cm, y=1.5cm]
+  \foreach \l [count=\i] in {t-1,t,t+1}{
+    \node [io] (input-\i) at (\i*1.2,0) {$\vect{x}_{\l}$};
+    \node [layer] (state-\i) at (\i*1.2,1) {};
+    \node [io] (output-\i) at (\i*1.2,2) {$\vect{y}_{\l}$};
+    
+    \draw [arrow] (input-\i) -- (state-\i);
+    \draw [arrow] (state-\i) -- (output-\i);
+  }
+  \node [layer, dashed] (state-l) at (0,1) {};
+  \node [layer, dashed] (state-r) at (4*1.2,1) {};
+  
+  \draw [arrow] (state-l) -- node[above]{$\vect{s}_{t-2}$} (state-1);
+  \draw [arrow] (state-1) -- node[above]{$\vect{s}_{t-1}$} (state-2);
+  \draw [arrow] (state-2) -- node[above]{$\vect{s}_{t}$} (state-3);
+  \draw [arrow] (state-3) -- node[above]{$\vect{s}_{t+1}$} (state-r);
+\end{tikzpicture}
+\end{document}
+
