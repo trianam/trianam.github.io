@@ -8,17 +8,21 @@ mathjax: true
 {% assign figcircle1 = 2 %}
 {% assign figcircle2 = 3 %}
 
+{% assign bibzongker = "Zongker2006" %}
+
 It is possible to write equations like
 
+$$
 \begin{equation}
 	\vec{y} = \frac{1}{e^x} \tag{1}
 	\label{eq:test}
 \end{equation}
+$$
 
 In equation \eqref{eq:test} is visible a test, it is also possible to
-write inline formulas like $y=x^2$. Note that is also possible to use
+write inline formulas like $y=x^2$. In some cases is necessary to use the doble dollar also inline, for instance in $$x_i$$. Note that is also possible to use
 footnotes[^fn1] in the text. To quote some pubblication write
-something like [Zongker2006](#zongker2006). The previous id link is created automatically with markdown header for Zongker2006.
+something like {% include cite.html label=bibzongker %}.
 
 I add some other stuff just to see if the reference link is working.
 I need some space to fill. In {% include ref.html label=figcat %} is visible a nice cat figure.
@@ -46,8 +50,7 @@ I put here another reference to {% include ref.html label=figcat %} just to se i
 
 ## References
 
-### Zongker2006
-Zongker, D. (2006). Chicken chicken chicken: Chicken chicken. Annals of Improbable Research, 12, 16--21.
+{% include bib.html label=bibzongker authors="Zongker, D" year=2006 title="Chicken chicken chicken: Chicken chicken" venue="Annals of Improbable Research" pages="12, 16--21" %}
 
 <br>
 
@@ -56,4 +59,4 @@ Zongker, D. (2006). Chicken chicken chicken: Chicken chicken. Annals of Improbab
 ## Footnotes
 
 [^fn1]: A footnote is something like that.
-[camado]: X
+
