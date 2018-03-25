@@ -33,12 +33,12 @@ collections:
     title: "Theory"
     order:
       - '/theory/machine-learning'
-  nlp:
+  nn:
     output: true
     weight: 40
-    title: "NLP"
+    title: "Neural Networks"
     order:
-      - '/nlp/rnn-generators'
+      - '/nn/rnn'
 
 # Markdown specs
 markdown: kramdown

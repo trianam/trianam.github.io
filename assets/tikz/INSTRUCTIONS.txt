@@ -1,2 +1,3 @@
-pdflatex xxx.tex
-pdf2svg xxx.pdf xxx.svg
+use auctex in emacs or:
+    pdflatex xxx.tex
+    pdf2svg xxx.pdf xxx.svg

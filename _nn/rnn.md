@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "RNN generators"
+title: "Recurrent Neural Networks (RNN)"
 date:   2018-03-24 14:00:00 +0100
 mathjax: true
 ---

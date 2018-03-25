@@ -1,3 +1,9 @@
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% End:
+
 \documentclass{standalone}
 \input{header.tex}
 \begin{document}
@@ -5,6 +11,8 @@
   \foreach \l [count=\i] in {t-1,t,t+1}{
     \node [io] (input-\i) at (\i*1.2,0) {$\vect{x}_{\l}$};
     \node [layer] (state-\i) at (\i*1.2,1) {};
+    \node [sub, anchor=north west] at (state-\i.north west) {$R,O$};
+    \node [subbox, anchor=south east] at (state-\i.south east) {$\theta$};
     \node [io] (output-\i) at (\i*1.2,2) {$\vect{y}_{\l}$};
     
     \draw [arrow] (input-\i) -- (state-\i);
@@ -19,4 +27,3 @@
   \draw [arrow] (state-3) -- node[above]{$\vect{s}_{t+1}$} (state-r);
 \end{tikzpicture}
 \end{document}
-
