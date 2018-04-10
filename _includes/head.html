@@ -74,7 +74,11 @@
   MathJax.Hub.Config({
         TeX: {
             Macros: {
-                vec: ['\\boldsymbol{#1}',1]
+                vec: ['\\boldsymbol{#1}',1],
+                mat: ['\\boldsymbol{#1}',1],
+                ten: ['\\boldsymbol{\\mathsf{#1}}',1],
+                tenE: ['\\mathsf{#1}',1],
+                mR: ['\\mathbb{R}']
             }
         }
   });

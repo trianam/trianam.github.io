@@ -32,6 +32,7 @@ collections:
     weight: 10
     title: "Theory"
     order:
+      - '/theory/linear-algebra'
       - '/theory/machine-learning'
   nn:
     output: true
