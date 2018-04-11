@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Test"
+title:  Test
 date:   2018-03-22 17:30:00 +0100
+author: Stefano Martina
 mathjax: true
 ---
 {% assign figcat = 1 %}

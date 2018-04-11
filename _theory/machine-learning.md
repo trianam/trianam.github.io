@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Machine Learning"
+title:  Machine Learning
 date:   2018-03-23 21:00:00 +0100
+author: Stefano Martina
 mathjax: true
 ---
 
