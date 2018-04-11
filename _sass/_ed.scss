@@ -746,6 +746,13 @@ div.toc {
   margin-top: -.5rem;
 }
 
+/* Page styles */
+
+.page h1 {
+    color: #841212;
+    font-weight: 400;
+}    
+
 /* Post styles */
 
 .post .date {
@@ -776,7 +783,8 @@ div.toc {
 }
 
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
-    font-weight: 600;
+    color: #841212;
+    font-weight: 400;
 }
 
 /* index style */

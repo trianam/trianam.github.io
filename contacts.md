@@ -5,7 +5,10 @@ title: Contacts
 
 ---
 
-**DINFO &mdash; Universit&agrave; degli Studi di Firenze**
+**Stefano Martina**
+
+**DINFO &mdash; Universit&agrave; degli Studi di Firenze**  
+(Department of computer engineering - University of Florence)
 
 Via di Santa Marta 3, I-50139 Firenze, Italy.  
 Room 546 &mdash; Artificial Intelligence Laboratory

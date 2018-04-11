@@ -40,9 +40,11 @@ A_{1,1} & A_{1,2} & \cdots & A_{1,m} \\
 A_{2,1} & \ddots & & A_{2,m}\\
 \vdots & & \ddots & \vdots \\
 A_{n,1} & A_{n,2} & \dots & A_{n,m}
-\end{bmatrix}
+\end{bmatrix}.
 \end{equation*}
 $$
+
+Sometimes it is useful to denote the elements of $\mat{A}$ with $$(\mat{A})_{i,j}$$ instead of $A_{i,j}$.
 
 ### Tensors
 Tensors are matrix generalization to multiple dimensions. They are multidimensional arrays of numbers arranged on a regular grid. Tensors are denoted with bold upper-case sans-serif letters, and its elements with lower-case letters.
@@ -55,7 +57,7 @@ Vectors and matrices can be transposed. The transposed matrix of $\mat{A}\in\mR^
 
 $$
 \begin{equation*}
-A^T_{i,j}=A_{j,i},\quad\forall i\in[1,m],\ \forall j\in[1,n].
+(\mat{A}^T)_{i,j}=A_{j,i},\quad\forall i\in[1,m],\ \forall j\in[1,n].
 \end{equation*}
 $$
 
@@ -138,6 +140,53 @@ Unlike matrix product, dot product is commutative:
 $$
 \begin{equation*}
 \vec{x}^T\vec{y} = \vec{y}^T\vec{x}.
+\end{equation*}
+$$
+
+## Identity and Inverse matrix
+### Identity matrix
+Identity matrix is a special square matrix that does not change the value of a vector when it is multiplied to it. It is denoted with $\mat{I}_n\in\mR^{n\times n}$ and it is equal to:
+
+$$
+\begin{equation*}
+\mat{I}_n = 
+\begin{bmatrix}
+1 & 0 & \cdots & 0 \\
+0 & 1 & & \vdots\\
+\vdots & & \ddots & 0 \\
+0 & \dots & 0 & 1
+\end{bmatrix},
+\end{equation*}
+$$
+
+where
+
+$$
+\begin{equation*}
+(\mat{I}_n)_{i,j} =
+\left\{
+\begin{array}{ll}
+    1&\mathrm{if}\ \ i=j\\
+    0&\mathrm{otherwise}
+\end{array}
+\right.
+\end{equation*}
+$$
+
+This matrix has the property that:
+
+$$
+\begin{equation*}
+\mat{I}_n\vec{x} = \vec{x},\quad \forall \vec{x}\in\mR^n
+\end{equation*}
+$$
+
+### Inverse matrix
+Given a matrix $\mat{A}\in\mR^{n\times m}$, his inverse is denoted with $\mat{A}^{-1}\in\mR^{m\times n}$ and it is the matrix such that:
+
+$$
+\begin{equation*}
+\mat{A}^{-1}\mat{A} = \mat{I}_m.
 \end{equation*}
 $$
 
