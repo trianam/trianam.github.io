@@ -143,6 +143,35 @@ $$
 \end{equation*}
 $$
 
+### Linear combination and span
+Given a set of vectors 
+
+$$
+\begin{equation}
+\{\vec{v}^{(1)},\dots,\vec{v}^{(n)}\},
+\label{eq:setSpan}
+\end{equation}
+$$
+
+it is possible to define a linear combination of such vectors with scalar coefficients $c_1,\dots,c_n$:
+
+$$
+\begin{equation*}
+\sum_{i=1}^{n}c_i\vec{v}^{(i)}.
+\end{equation*}
+$$
+
+The span of the set \eqref{eq:setSpan} is the set of all vectors that can be obtained as linear combination of it:
+
+$$
+\begin{equation*}
+\begin{split}
+Span(\vec{v}^{(1)},&\dots,\vec{v}^{(n)})=\\
+&\{\vec{w}\in\mR^n | (\exists c_1,\dots,c_n)[\vec{w}=\sum_{i=1}^{n}c_i\vec{v}^{(i)}]\}.
+\end{split}
+\end{equation*}
+$$
+
 ## Identity and Inverse matrix
 ### Identity matrix
 Identity matrix is a special square matrix that does not change the value of a vector when it is multiplied to it. It is denoted with $\mat{I}_n\in\mR^{n\times n}$ and it is equal to:
@@ -189,6 +218,48 @@ $$
 \mat{A}^{-1}\mat{A} = \mat{I}_m.
 \end{equation*}
 $$
+
+The inverse of a matrix not always exists. The existence of $\mat{A}^{-1}$ is related to solutions of a system of linear equations. We introduce the equation system:
+
+$$
+\begin{equation}
+\left\{
+\begin{array}{rcl}
+    A_{1,1}x_1+A_{1,2}x_2+\dots+A_{1,n}x_n&=&b_1\\
+    A_{2,1}x_1+A_{2,2}x_2+\dots+A_{2,n}x_n&=&b_2\\
+    \cdots&&\\
+    A_{m,1}x_1+A_{m,2}x_2+\dots+A_{m,n}x_n&=&b_m
+\end{array}
+\right.
+\label{eq:systemBig}
+\end{equation}
+$$
+
+where $A_{i,j}$ are coefficients, $x_i$ variables and $b_i$ constant terms. It is possible to express \eqref{eq:systemBig} in a compact form using matrix notation:
+
+$$
+\begin{equation}
+\mat{A}\vec{x}=\vec{b}.
+\label{eq:system}
+\end{equation}
+$$
+
+If $\mat{A}^{-1}$ exists, then we can use it to solve \eqref{eq:system}:
+
+$$
+\begin{equation*}
+\begin{array}{rcl}
+\mat{A}\vec{x}&=&\vec{b}\\
+\mat{A}^{-1}\mat{A}\vec{x}&=&\mat{A}^{-1}\vec{b}\\
+\mat{I}_n\vec{x}&=&\mat{A}^{-1}\vec{b}\\
+\vec{x}&=&\mat{A}^{-1}\vec{b}.
+\end{array}
+\end{equation*}
+$$
+
+Thus, in order $\mat{A}^{-1}$ exists, \eqref{eq:system} need to have one and only one solution for every $\vec{b}$.
+
+
 
 <br>
 
