@@ -46,6 +46,8 @@ $$
 
 Sometimes it is useful to denote the elements of $\mat{A}$ with $$(\mat{A})_{i,j}$$ instead of $A_{i,j}$.
 
+It is possible to denote the $i$-th row of $\mat{A}$ with $\mat{A}_{i,:}$ and the $j$-th column with $\mat{A}_{:,j}$.
+
 ### Tensors
 Tensors are matrix generalization to multiple dimensions. They are multidimensional arrays of numbers arranged on a regular grid. Tensors are denoted with bold upper-case sans-serif letters, and its elements with lower-case letters.
 
@@ -172,6 +174,9 @@ Span(\vec{v}^{(1)},&\dots,\vec{v}^{(n)})=\\
 \end{equation*}
 $$
 
+### Linear independence
+A set of vectors like \eqref{eq:setSpan} is linearly independent if no vector of it can be expressed as linear combination of the others.
+
 ## Identity and Inverse matrix
 ### Identity matrix
 Identity matrix is a special square matrix that does not change the value of a vector when it is multiplied to it. It is denoted with $\mat{I}_n\in\mR^{n\times n}$ and it is equal to:
@@ -259,7 +264,33 @@ $$
 
 Thus, in order $\mat{A}^{-1}$ exists, \eqref{eq:system} need to have one and only one solution for every $\vec{b}$.
 
+Note that for the definition of matrix product, $\mat{A}\vec{x}$ is a vector in $\mR^m$, and
 
+$$
+\begin{equation*}
+b_i=(\mat{A}\vec{x})_i=\sum_{j=1}^n A_{i,j}x_j=\sum_{j=1}^n x_j A_{i,j},\quad\forall i\in[1,m]
+\end{equation*}
+$$
+
+or more compactly
+
+$$
+\begin{equation*}
+\vec{b}=\mat{A}\vec{x}=\sum_{j=1}^nx_j\mat{A}_{:,j}.
+\end{equation*}
+$$
+
+In other terms $\vec{b}$ is a linear combination of the columns of $\mat{A}$. Thus, we need to verify if $$\vec{b}\in Span(\mat{A}_{:,1},\dots,\mat{A}_{:,n})$$ to determine if \eqref{eq:system} has a solution[^fn2].
+
+Without going to details, to verify if \eqref{eq:system} has one and only one solution for every $\vec{b}$ (and thus $\mat{A}^{-1}$ exists), $\mat{A}$ need to be a square matrix with all the column linearly independent[^fn3].
+
+Note that for square matrices
+
+$$
+\begin{equation*}
+\mat{A}^{-1}\mat{A}=\mat{A}\mat{A}^{-1}
+\end{equation*}
+$$
 
 <br>
 
@@ -276,4 +307,5 @@ Thus, in order $\mat{A}^{-1}$ exists, \eqref{eq:system} need to have one and onl
 ## Footnotes
 
 [^fn1]: E.g. the canonical base with all ones.
-
+[^fn2]: $$Span(\mat{A}_{:,1},\dots,\mat{A}_{:,n})$$ is called column space or range of $\mat{A}$.
+[^fn3]: A matrix with linearly independent columns is called non singular.
