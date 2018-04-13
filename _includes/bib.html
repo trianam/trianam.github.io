@@ -1,3 +1,9 @@
-<strong id="{{ include.label }}">[{{ include.label }}]</strong> {{ include.authors }} ({{ include.year }}). {{ include.title }}. {{ include.venue }}{% if include.pages %}, {{ include.pages }}{% endif %}.
+<div id="{{ include.label }}" class="bibitem">
+  <span class="label">[{{ include.label }}]</span>
+  <span class="authors">{{ include.authors }}</span>
+  <span class="year">({{ include.year }}).</span>
+  <span class="title">{{ include.title }}.</span>
+  <span class="venue">{{ include.venue }}{% if include.pages %}, {{ include.pages }}{% endif %}.</span>
+</div>
 
 

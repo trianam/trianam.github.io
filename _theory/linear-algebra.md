@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Linear Algebra
-date:   2018-04-10 19:00:00 +0100
+date:   2018-04-10 19:00:00 +0200
 author: Stefano Martina
 mathjax: true
 ---

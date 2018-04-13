@@ -34,6 +34,13 @@ collections:
     order:
       - '/theory/linear-algebra'
       - '/theory/machine-learning'
+  ml:
+    output: true
+    weight: 20
+    title: "Machine Learning"
+    order:
+      - '/ml/hyperparameters-optimization'
+  
   nn:
     output: true
     weight: 40
