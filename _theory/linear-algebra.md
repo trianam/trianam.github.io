@@ -46,7 +46,7 @@ $$
 
 Sometimes it is useful to denote the elements of $\mat{A}$ with $$(\mat{A})_{i,j}$$ instead of $A_{i,j}$.
 
-It is possible to denote the $i$-th row of $\mat{A}$ with $\mat{A}_{i,:}$ and the $j$-th column with $\mat{A}_{:,j}$.
+It is possible to denote the $i$-th row of $\mat{A}$ with $$\mat{A}_{i,:}$$ and the $j$-th column with $$\mat{A}_{:,j}$$.
 
 ### Tensors
 Tensors are matrix generalization to multiple dimensions. They are multidimensional arrays of numbers arranged on a regular grid. Tensors are denoted with bold upper-case sans-serif letters, and its elements with lower-case letters.
@@ -307,5 +307,5 @@ $$
 ## Footnotes
 
 [^fn1]: E.g. the canonical base with all ones.
-[^fn2]: $$Span(\mat{A}_{:,1},\dots,\mat{A}_{:,n})$$ is called column space or range of $\mat{A}$.
+[^fn2]: $$Span(\mat{A}_{:,1},\dots,\mat{A}_{:,n})$$ is called *column space* or *range* of $\mat{A}$.
 [^fn3]: A matrix with linearly independent columns is called non singular.
