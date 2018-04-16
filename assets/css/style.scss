@@ -88,7 +88,7 @@ html {
 
 /* Bibliography styles */
 
-.bibitem .label{
+.bibitem .label {
     color: $heading-color;
 }
 
@@ -96,8 +96,12 @@ html {
     font-weight: bold;
 }
 
-.bibitem .venue{
+.bibitem .venue {
     font-style: italic;
 }
 
-
+.bibitem .doi img {
+    display: inline-block;
+    height: 20px;
+    margin: 0 0 0 10px;
+}

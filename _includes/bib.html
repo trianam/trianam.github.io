@@ -4,6 +4,7 @@
   <span class="year">({{ include.year }}).</span>
   <span class="title">{{ include.title }}.</span>
   <span class="venue">{{ include.venue }}{% if include.pages %}, {{ include.pages }}{% endif %}.</span>
+  {% if include.doi %}<span class="doi"><a href="{{ include.doi }}" target="_blank"><img src="/assets/doi_logo_for_display.gif" alt="DOI"></a></span>{% endif %}
 </div>
 
 
