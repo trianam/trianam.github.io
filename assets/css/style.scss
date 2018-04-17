@@ -39,7 +39,7 @@ html {
 
 /* Page styles */
 
-.page h1 {
+.page h1, .page h2, .page h3, .page h4, .page h5, .page h6 {
     color: $heading-color;
     font-weight: 400;
 }
@@ -105,3 +105,17 @@ html {
     height: 20px;
     margin: 0 0 0 10px;
 }
+
+/* contact page */
+
+.personalinfo img {
+    display: inline;
+    height: 20px;
+    margin: 0 10px 0 0;
+}
+
+/*
+.personalinfo script {
+    display: inline-block;
+}
+*/
