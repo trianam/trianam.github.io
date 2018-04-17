@@ -6,12 +6,14 @@ author: Stefano Martina
 mathjax: true
 ---
 {% assign figRandomSearch = 1 %}
+{% assign figSmbo = 2 %}
 
 {% assign hutter2015 = "Hutter2015" %}
 {% assign bengio2000 = "Bengio2000" %}
 {% assign guo2006 = "Guo2006" %}
 {% assign maron1994 = "Maron1994" %}
 {% assign bergstra2012 = "Bergstra2012" %}
+{% assign hutter2011 = "Hutter2011" %}
 
 The construction of machine learning models models demands big effort on hyperparameters tuning. Usually the hyperparameters are manually engineered and are the product of time-consuming experimentations. Hyperparameters choose is really important in model performance.
 
@@ -59,13 +61,16 @@ other approaches include:
 
 It has been proven that a random search is more effective than grid search on models with low effective dimensionality {% include cite.html label=bergstra2012 %}.
 
-{% include image.html url="/assets/randomSearch.svg" label=figRandomSearch description="Grid search versus random search on $\Lambda$ with two dimensions." width="90%" %}
+{% include image.html url="/assets/randomSearch.svg" label=figRandomSearch description="Grid search versus random search in $\Lambda$ with two dimensions." width="90%" %}
 
 This improvement is visible in {% include ref.html label=figRandomSearch %} where an example bidimensional parameter space is shown. The green area identifies an important parameter, the yellow one an unimportant one. Thus the effective dimensionality of the example is closer to one respect to two. In both grid and random search settings we use a cardinality of nine for $V\subset\Lambda$, but in the grid layout we test the important parameter only on three values instead of nine.
 
-Recently more sophisticated *Sequential Model-based Bayesian Optimization* (SMBO) methods have been developed. Those methods grant better results on \eqref{eq:problem} and are capable of optimize when $\Lambda$ has far more dimensions respect to other methods.
+Recently more sophisticated *Sequential Model-based Bayesian Optimization* (SMBO) {% include cite.html label=hutter2011 %} methods have been developed. Those methods grant better results on \eqref{eq:problem} and are capable of optimize when $\Lambda$ has far more dimensions respect to other methods.
 
 #### Sequential Model-based Bayesian Optimization (SMBO)
+
+{% include image.html url="/assets/smbo.svg" label=figSmbo description="SMBO algorithm." width="90%" %}
+
 
 <br>
 
@@ -78,6 +83,7 @@ Recently more sophisticated *Sequential Model-based Bayesian Optimization* (SMBO
 {% include bib.html label=guo2006 authors="Guo X.C., Liang Y.C., Wu C.G., Wang C.Y." year=2006 title="PSO-Based Hyper-Parameters Selection for LS-SVM Classifiers" venue="Neural Information Processing. ICONIP 2006" doi="https://doi.org/10.1007/11893257_124" %}
 {% include bib.html label=maron1994 authors="Maron O., Moore A. W." year=1994 title="Hoeffding Races: Accelerating Model Selection Search for Classification and Function Approximation" venue="Advances in Neural Information Processing Systems 6" pages="59--66" link="https://papers.nips.cc/paper/841-hoeffding-races-accelerating-model-selection-search-for-classification-and-function-approximation" %}
 {% include bib.html label=bergstra2012 authors="Bergstra J, Bengio Y." year=2012 title="Random search for hyper-parameter optimization" venue="The Journal of Machine Learning Research" pages="Volume 13 Issue 1, January 2012, Pages 281-305" link="http://www.jmlr.org/papers/v13/bergstra12a.html" %}
+{% include bib.html label=hutter2011 authors="Hutter F., Hoos H.H., Leyton-Brown K." year=2011 title="Sequential Model-Based Optimization for General Algorithm Configuration" venue="Learning and Intelligent Optimization. LION 2011" doi="https://doi.org/10.1007/978-3-642-25566-3_40" %}
 
 <br>
 
