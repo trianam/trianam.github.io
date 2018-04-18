@@ -68,8 +68,27 @@ This improvement is visible in {% include ref.html label=figRandomSearch %} wher
 Recently more sophisticated *Sequential Model-based Bayesian Optimization* (SMBO) {% include cite.html label=hutter2011 %} methods have been developed. Those methods grant better results on \eqref{eq:problem} and are capable of optimize when $\Lambda$ has far more dimensions respect to other methods.
 
 #### Sequential Model-based Bayesian Optimization (SMBO)
+SMBO are generic framework for optimizing blackbox functions. It uses a probabilistic model $\model$ to model $f$ based on point evaluation and any prior. It uses $\model$ to evaluate promising inputs and update $\model$ itself.
 
 {% include image.html url="/assets/smbo.svg" label=figSmbo description="SMBO algorithm." width="90%" %}
+
+In {% include ref.html label=figSmbo %} is visible the algorithm that resume the optimization. In order to determine the candidate $\vec{\lambda}$ in line 3, SMBO uses an *acquisition function* $a_\model:\Lambda\rightarrow\mR$. The purpose of this function is to quantify the usefulness of chosing a configuration $\vec{\lambda}\in\Lambda$. The objective is to maximise:
+
+$$
+\begin{equation*}
+\argmax_{\vec{\lambda}\in\Lambda}\ a_\model(\vec{\lambda}).
+\end{equation*}
+$$
+
+The function $a_\model$ must be selected according to the tradeof between the exploitation (concentrate in regions where the performances are good) and exploration (trying unexplored regions) of the hyperparameters space $\Lambda$. The most used function is the *Expected Improvement* (EI):
+
+$$
+\begin{equation*}
+EI(\vec{\lambda}) = \int_{-\infty}^{f_{min}}\max\{f_{min}-f, 0\}\cdot p_\model(f|\vec{\lambda})\ df
+\end{equation*}
+$$
+
+that at each value $\vec{\lambda}$ integrates the improvements over $f_{min}$ accordingly to a posterior $p_\model(f|\vec{\lambda})$ over the model $\model$.
 
 
 <br>
