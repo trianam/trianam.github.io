@@ -119,3 +119,41 @@ html {
     display: inline-block;
 }
 */
+
+/* header numbers (http://support.markedapp.com/kb/how-to-tips-and-tricks/custom-css-adding-chapter-numbers-with-custom-css)*/
+body {
+    counter-reset: chapter; /* create a chapter counter scope */
+}
+.post h2:before {
+    content: counter(chapter) " ";
+    counter-increment: chapter; /* add 1 to chapter */
+}
+.post h2 {
+    counter-reset: subchapter; /* set section to 0 */
+}
+.post h3:before {
+    content: counter(chapter) "." counter(subchapter) " ";
+    counter-increment: subchapter;
+}
+.post h3 {
+    counter-reset: section;
+}
+.post h4:before {
+    content: counter(chapter) "." counter(subchapter) "." counter(section) " ";
+    counter-increment: section;
+}
+.post h4 {
+    counter-reset: subsection;
+}
+.post h5:before {
+    content: counter(chapter) "." counter(subchapter) "." counter(section) "." counter(subsection) " ";
+    counter-increment: subsection;
+}
+.post h5 {
+    counter-reset: subsubsection;
+}
+.post h6:before {
+    content: counter(chapter) "." counter(subchapter) "." counter(section) "." counter(subsection) "." counter(subsubsection) " ";
+    counter-increment: subsubsection;
+}
+

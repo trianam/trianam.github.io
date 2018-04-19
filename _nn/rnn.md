@@ -39,13 +39,13 @@ It can be useful to visualize the model unfolded as in {% include ref.html label
 
 ---
 
-## References
+# References
 {% include bib.html label="Goldberg2017" authors="Goldberg, Yoav" year=2017 title="Neural Network Methods for Natural Language Processing" venue="Morgan & Claypool Publishers" %}
 
 <br>
 
 ---
 
-## Footnotes
+# Footnotes
 
 [^fn1]: Note that in literature you can find different notations.

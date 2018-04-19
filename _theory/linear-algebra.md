@@ -296,7 +296,7 @@ $$
 
 ---
 
-## References
+# References
 
 {% include bib.html label=deeplearning authors="Goodfellow, I.; Bengio, Y.; Courville, A." year=2016 title="Deep Learning" venue="MIT Press" %}
 
@@ -304,7 +304,7 @@ $$
 
 ---
 
-## Footnotes
+# Footnotes
 
 [^fn1]: E.g. the canonical base with all ones.
 [^fn2]: $$Span(\mat{A}_{:,1},\dots,\mat{A}_{:,n})$$ is called *column space* or *range* of $\mat{A}$.

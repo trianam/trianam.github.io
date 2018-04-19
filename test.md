@@ -49,7 +49,7 @@ I put here another reference to {% include ref.html label=figcat %} just to se i
 
 ---
 
-## References
+# References
 
 {% include bib.html label=bibzongker authors="Zongker, D" year=2006 title="Chicken chicken chicken: Chicken chicken" venue="Annals of Improbable Research" pages="12, 16--21" %}
 
@@ -57,7 +57,7 @@ I put here another reference to {% include ref.html label=figcat %} just to se i
 
 ---
 
-## Footnotes
+# Footnotes
 
 [^fn1]: A footnote is something like that.
 

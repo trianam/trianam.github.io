@@ -14,6 +14,8 @@ mathjax: true
 {% assign maron1994 = "Maron1994" %}
 {% assign bergstra2012 = "Bergstra2012" %}
 {% assign hutter2011 = "Hutter2011" %}
+{% assign snoek2012 = "Snoek2012" %}
+{% assign bergstra2011 = "Bergstra2011" %}
 
 The construction of machine learning models models demands big effort on hyperparameters tuning. Usually the hyperparameters are manually engineered and are the product of time-consuming experimentations. Hyperparameters choose is really important in model performance.
 
@@ -83,19 +85,51 @@ $$
 The function $a_\model$ must be selected according to the tradeof between the exploitation (concentrate in regions where the performances are good) and exploration (trying unexplored regions) of the hyperparameters space $\Lambda$. The most used function is the *Expected Improvement* (EI):
 
 $$
+\begin{equation}
+EI(\vec{\lambda}) = \int_{-\infty}^{f_{min}}\max\{f_{min}-f, 0\}\cdot p_\model(f\mid\vec{\lambda})\ df
+\label{eq:ei}
+\end{equation}
+$$
+
+that at each value $\vec{\lambda}$ integrates the improvements over $f_{min}$ accordingly to a posterior $$p_\model(f\mid\vec{\lambda})$$ over the model $\model$.
+
+Using a gaussian posterior with mean $\mu_\vec{\lambda}$ and variance $\sigma_\vec{\lambda}^2$, \eqref{eq:ei} simplifies to:
+
+$$
 \begin{equation*}
-EI(\vec{\lambda}) = \int_{-\infty}^{f_{min}}\max\{f_{min}-f, 0\}\cdot p_\model(f|\vec{\lambda})\ df
+EI(\vec{\lambda}) = \sigma_\vec{\lambda}\cdot(u\cdot\Phi(u)+\phi(u)),
 \end{equation*}
 $$
 
-that at each value $\vec{\lambda}$ integrates the improvements over $f_{min}$ accordingly to a posterior $p_\model(f|\vec{\lambda})$ over the model $\model$.
+where $u=\frac{f_{min}-\mu_\vec{\lambda}}{\sigma_\vec{\lambda}}$ and $\phi$ and $\Phi$ are the PDF[^fn1] and CDF[^fn2] of the standard normal distribution.
+
+The following bayesian optimization packages have been used in literature:
+- **Sequential Model-based Algorithm Configuration (SMAC)** {% include cite.html label=hutter2011 %} uses random forests to model $p_\model(f\mid\vec{\lambda})$ as a gaussian distribution whose mean and variance are the empirical mean and variance over predictions of the forest's tree.
+- **Spearmint** {% include cite.html label=snoek2012 %} uses a *Gaussian Process* to model $p_\model(f\mid\vec{\lambda})$.
+- **Tree Parzen Estimator (TPE)** {% include cite.html label=bergstra2011 %} models $p(\vec{\lambda}\mid f)$ and $p(f)$ instead of $p(f\mid\vec{\lambda})$. That is:
+
+  $$
+  \begin{equation*}
+  p(\vec{\lambda}\mid f) =
+  \left\{
+  \begin{array}{ll}
+      l(\vec{\lambda})&\mathrm{if}\ \ f<f^*\\
+      g(\vec{\lambda})&\mathrm{otherwise}
+  \end{array}
+  \right.
+  \end{equation*}
+  $$
+
+  where $l(\vec{\lambda})$ is the PDF formed by using observations $$\{\vec{\lambda}^{(i)}\}$$ such that $$f(\vec{\lambda}^{(i)})<f^*$$ and $g(\vec{\lambda})$ using the remaining observations. $$f^*$$ is chosen to be a quantile $\gamma$ of the observed $f$ such that $p(f<f^*)=\gamma$.
+
+Spearmint works for problems with few hyperparameters. 
 
 
 <br>
 
 ---
 
-## References
+# References
 
 {% include bib.html label=hutter2015 authors="Hutter F., Lücke J., Schmidt-Thieme L." year=2015 title="Beyond Manual Tuning of Hyperparameters" venue="KI - Künstliche Intelligenz" pages="Volume 29, Issue 4, pp 329–337" doi="https://doi.org/10.1007/s13218-015-0381-0" %}
 {% include bib.html label=bengio2000 authors="Bengio, Y" year=2000 title="Gradient-Based Optimization of Hyperparameters" venue="Neural Computation" pages="Volume 12, Issue 8, p.1889-1900" doi="https://doi.org/10.1162/089976600300015187" %}
@@ -103,12 +137,15 @@ that at each value $\vec{\lambda}$ integrates the improvements over $f_{min}$ ac
 {% include bib.html label=maron1994 authors="Maron O., Moore A. W." year=1994 title="Hoeffding Races: Accelerating Model Selection Search for Classification and Function Approximation" venue="Advances in Neural Information Processing Systems 6" pages="59--66" link="https://papers.nips.cc/paper/841-hoeffding-races-accelerating-model-selection-search-for-classification-and-function-approximation" %}
 {% include bib.html label=bergstra2012 authors="Bergstra J, Bengio Y." year=2012 title="Random search for hyper-parameter optimization" venue="The Journal of Machine Learning Research" pages="Volume 13 Issue 1, January 2012, Pages 281-305" link="http://www.jmlr.org/papers/v13/bergstra12a.html" %}
 {% include bib.html label=hutter2011 authors="Hutter F., Hoos H.H., Leyton-Brown K." year=2011 title="Sequential Model-Based Optimization for General Algorithm Configuration" venue="Learning and Intelligent Optimization. LION 2011" doi="https://doi.org/10.1007/978-3-642-25566-3_40" %}
+{% include bib.html label=snoek2012 authors="Snoek J., Larochelle H., Adams R. P." year=2012 title="Practical Bayesian optimization of machine learning algorithms" venue="NIPS'12 Proceedings of the 25th International Conference on Neural Information Processing Systems - Volume 2" pages="Pages 2951-2959" link="https://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms" %}
+{% include bib.html label=bergstra2011 authors="Bergstra J., Bardenet R., Bengio Y., Kégl B." year=2011 title="Algorithms for hyper-parameter optimization" venue="NIPS'11 Proceedings of the 24th International Conference on Neural Information Processing Systems" pages="Pages 2546-2554" link="https://papers.nips.cc/paper/4443-algorithms-for-hyper-parameter-optimization" %}
 
 <br>
 
 ---
 
-## Footnotes
-
+# Footnotes
+[^fn1]: Probability Density Function
+[^fn2]: Cumulative Density Function
 
 
