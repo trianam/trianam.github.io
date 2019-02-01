@@ -45,6 +45,10 @@ Lorem **ipsum** dolor sit *amet*, consectetur adipiscing elit, sed do eiusmod te
 
 I put here another reference to {% include ref.html label=figcat %} just to se if the link is working.
 
+This is how to make a bullet list:
+* first item;
+* second item.
+
 <br>
 
 ---

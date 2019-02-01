@@ -1,0 +1,14 @@
+=============
+Start server
+=============
+
+jekyll serve
+from browser localost:4000
+
+=============
+Add page
+=============
+create page or copy from existing or from test.md
+the date is of pubblication (if is after now the page is not visible)
+update _config.yml (restart server)
+

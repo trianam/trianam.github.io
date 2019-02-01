@@ -47,6 +47,7 @@ collections:
     title: "Neural Networks"
     order:
       - '/nn/rnn'
+      - '/nn/cascade-correlation'
 
 # Markdown specs
 markdown: kramdown
