@@ -47,7 +47,6 @@ collections:
     weight: 40
     title: "Neural Networks"
     order:
-      - '/nn/autoencoders'
       - '/nn/rnn'
       - '/nn/cascade-correlation'
 
