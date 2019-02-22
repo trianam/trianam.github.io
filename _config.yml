@@ -34,6 +34,7 @@ collections:
     order:
       - '/theory/linear-algebra'
       - '/theory/machine-learning'
+      - '/theory/graphical-models'
   ml:
     output: true
     weight: 20
@@ -46,6 +47,7 @@ collections:
     weight: 40
     title: "Neural Networks"
     order:
+      - '/nn/autoencoders'
       - '/nn/rnn'
       - '/nn/cascade-correlation'
 

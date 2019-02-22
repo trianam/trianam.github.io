@@ -3,6 +3,7 @@ Start server
 =============
 
 jekyll serve
+(sometimes "bundle exec jekyll serve")
 from browser localost:4000
 
 =============

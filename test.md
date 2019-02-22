@@ -41,10 +41,13 @@ If we omit the description what happens?
 And if we omit both label and description what happens?
 {% include image.html url="/assets/test/test-circle.svg" width="20%" %}
 
+# Section
 Lorem **ipsum** dolor sit *amet*, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+## Subsection
 I put here another reference to {% include ref.html label=figcat %} just to se if the link is working.
 
+### Subsubsection
 This is how to make a bullet list:
 * first item;
 * second item.
@@ -55,7 +58,7 @@ This is how to make a bullet list:
 
 # References
 
-{% include bib.html label=bibzongker authors="Zongker, D" year=2006 title="Chicken chicken chicken: Chicken chicken" venue="Annals of Improbable Research" pages="12, 16--21" %}
+{% include bib.html label=bibzongker authors="Zongker, D" year=2006 title="Chicken chicken chicken: Chicken chicken" venue="Annals of Improbable Research" pages="12, 16--21" link="http://www.google.com" doi="https://doi.org/10.1007/11893257_124" %}
 
 <br>
 

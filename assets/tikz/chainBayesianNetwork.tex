@@ -1,0 +1,19 @@
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% End:
+
+\documentclass{standalone}
+\input{header.tex}
+\begin{document}
+\begin{tikzpicture}[x=1.5cm, y=1.5cm]
+  \node [randomVar] (a) at (0,1.5) {$a$};
+  \node [randomVar] (b) at (2,1) {$b$};
+  \node [randomVar] (c) at (1,0) {$c$};
+
+  \draw [arrow] (a) -- (b);
+  \draw [arrow] (a) -- (c);
+  \draw [arrow] (b) -- (c);
+\end{tikzpicture}
+\end{document}
