@@ -15,7 +15,7 @@ if the graph is directed or not:
 * **Bayesian networks** are directed graphical models;
 * **Markov random fields** are undirected graphical models.
 
-# Bayesian Networks
+## Bayesian Networks
 To introduce Bayesan networks, consider the *probability chain rule*
 where the joint distribution over variables is decomposed as product
 of conditioned probabilities:
@@ -54,6 +54,9 @@ $$
 
 where $\vec{x}$ is $$\{x_1, \dots, x_K\}$$ and $pa_k$ is the set of
 parents of $x_k$. 
+
+### Polynomial regression
+
 
 <br>
 

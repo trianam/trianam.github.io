@@ -52,6 +52,10 @@ This is how to make a bullet list:
 * first item;
 * second item.
 
+This is how to make a numbered list:
+1. first item;
+2. second item.
+
 <br>
 
 ---
